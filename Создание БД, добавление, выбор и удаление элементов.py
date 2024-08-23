@@ -18,7 +18,7 @@ cursor.execute('CREATE INDEX IF NOT EXISTS idx_email ON users (email)')
 #     cursor.execute('INSERT INTO Users (username, email, age, balance) VALUES (?, ?, ?, ?)',
 #                    (f'user{i}', f'example{i}gmail.com', i * 10, 1000))
 
-# cursor.execute('Update Users SET balance = 500 WHERE id % 2 = 1')
+# cursor.execute('Update Users SET balance = ? WHERE id % 2 = 1 ', (500,))
 
 
 users = cursor.execute('SELECT * FROM Users WHERE age != ?', (60,)).fetchall()
