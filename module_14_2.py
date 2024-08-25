@@ -1,11 +1,3 @@
-# Удалите каждую 3ую запись в таблице начиная с 1ой:
-# User2, example2@gmail.com, 20, 1000
-# User3, example3@gmail.com, 30, 500
-# User5, example5@gmail.com, 50, 500
-# ...
-# User9, example9@gmail.com, 90, 500
-
-
 import sqlite3
 
 connection = sqlite3.connect('not_telegram_2.db ')
