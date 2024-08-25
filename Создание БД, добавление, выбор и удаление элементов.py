@@ -20,6 +20,7 @@ cursor.execute('CREATE INDEX IF NOT EXISTS idx_email ON users (email)')
 
 # cursor.execute('Update Users SET balance = ? WHERE id % 2 = 1 ', (500,))
 
+cursor.execute('DELETE FROM Users WHERE id % 3 = 1').fetchall()
 
 users = cursor.execute('SELECT * FROM Users WHERE age != ?', (60,)).fetchall()
 
